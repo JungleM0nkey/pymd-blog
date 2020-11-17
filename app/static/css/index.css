@@ -17,12 +17,10 @@ h1{
     background-color: white;
 }
 
-pre {
-    white-space: pre-wrap;       /* css-3 */
-    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-    white-space: -pre-wrap;      /* Opera 4-6 */
-    white-space: -o-pre-wrap;    /* Opera 7 */
-    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+/*archive year*/
+h4{
+    padding:0px;
+    margin:0px;
 }
 
 .archive{
@@ -31,4 +29,14 @@ pre {
     padding: 1em;
     margin-bottom:2em;
     background-color: white;
+    
 }
+
+.archive-year{
+    background-color:rgb(240, 240, 240);
+    margin-top:10px;
+    padding:5px;
+    border-radius:5px;
+}
+
+

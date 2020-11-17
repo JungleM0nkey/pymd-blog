@@ -5,18 +5,27 @@
     <div class="posts">
         <h1>Blog Posts</h1>
         <div class="row">
-            <div class="col-lg-7 col-md-4 col-sm-12 desc">
+            <div class="col-xl-7 col-lg-10 col-md-12 col-sm-12 desc">
                 {% for post in posts %}
                     <div id='{{ post }}' class="post">
                        <!-- <h2>{{ post }}</h2>-->
                     </div>
                 {% endfor %}
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-12 desc">
-                <h1>Posts Archive</h2>
+            <div class="col-xl-3 col-lg-10 col-md-12 col-sm-12 desc">
+                <h1>Blog Archive</h2>
                 <div class="archive">
-                    {% for post in posts %}
-                    • <a href='#{{ post }}'>{{ post }}</a><br>
+                    {% for year in year_list %}
+                        <div class="archive-year">
+                            <h4>{{ year }}</h4>
+                        </div>
+                        {% for post_object in post_objects %}
+                            {% if post_object.year == year %}
+                            <div class="archive-link">
+                               <span>•</span>  <a href="#{{ post_object.name }}">{{ post_object.name }}</a><br>
+                            </div>
+                            {% endif %}
+                        {% endfor %}
                     {% endfor %}
                 </div>
             </div>

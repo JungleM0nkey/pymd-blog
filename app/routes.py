@@ -16,21 +16,34 @@ from pygments.styles import get_style_by_name
 import frontmatter
 from datetime import datetime
 
+class Post():
+    def __init__(self,name,year):
+        self.name = name
+        self.year = year
 
 @app.route('/', methods=['GET','POST'])
 def index():
     post_files = [ x[:-3] for x in os.listdir(POST_DIR) ]
     unsorted_files = {}
+    post_objects = []
+    year_set = set()
     #get the date for the files from the file metadata
     for f in post_files:
         post = frontmatter.load(f"{POST_DIR}\\{f}.md")
         date = str(post['published-on']).replace(',','')
+        year = date.split(' ')[2]
         datetime_object = datetime.strptime(date, '%B %d %Y')
         unsorted_files[f'{f}'] = datetime_object
+        year_set.add(year)
+        post_objects.append(Post(name=f,year=year))
     #sort the files by date
     sorted_files = sorted(unsorted_files, key=unsorted_files.get)
     sorted_files.reverse()
-    return render_template('index.html', posts=sorted_files)
+    #sort the years
+    year_list = list(year_set)
+    year_list.sort()
+    year_list.reverse()
+    return render_template('index.html', posts=sorted_files, year_list=year_list,post_objects=post_objects)
 
 @app.route('/posts/<post>', methods=['GET'])
 def post(post):
