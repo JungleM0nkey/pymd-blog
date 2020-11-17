@@ -1,0 +1,48 @@
+body {
+    overflow-x:hidden;
+    background-image: url('../images/email-pattern.png');
+}
+
+.navbar{ 
+    background:#2d65ff;
+    padding:0px;
+}
+
+.navbar-nav{
+    line-height:40px;
+}
+
+.nav-link{
+    margin-right: 1em !important;
+    padding:0f;
+    color: #f4f4f4; 
+    cursor: pointer;
+}
+
+.nav-link:hover{ 
+    background: #ffffff; 
+    color: #2d65ff; 
+}
+
+.navbar-brand{
+    color:white;
+    margin-left: 1em !important;
+}
+
+.navbar-brand:hover{
+    color:white;
+}
+
+.navbar-collapse{ 
+    justify-content: flex-end;
+}
+
+.navbar-toggler{  
+    background:#fff !important;
+}
+
+.codehilite{
+    background-color: rgb(241, 241, 241);
+    border-radius:2.5px;
+    padding:20px;
+}
