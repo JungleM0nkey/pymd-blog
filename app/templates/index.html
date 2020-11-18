@@ -3,7 +3,7 @@
 {% block content %}
 <div class="container">
     <div class="posts">
-        <h1>Blog Posts</h1>
+        <!--<h1>Blog Posts</h1>-->
         <div class="row">
             <div class="col-xl-7 col-lg-10 col-md-12 col-sm-12 desc">
                 {% for post in posts %}
@@ -12,9 +12,10 @@
                     </div>
                 {% endfor %}
             </div>
-            <div class="col-xl-3 col-lg-10 col-md-12 col-sm-12 desc">
-                <h1>Blog Archive</h2>
-                <div class="archive">
+            <div id="archive-column" class="col-xl-3 col-lg-10 col-md-12 col-sm-12 desc">
+                
+                <div class="archive position-fixed">
+                    <h1>Blog Archive</h2>
                     {% for year in year_list %}
                         <div class="archive-year">
                             <h4>{{ year }}</h4>
