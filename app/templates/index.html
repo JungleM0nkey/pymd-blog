@@ -5,15 +5,12 @@
     <div class="posts">
         <!--<h1>Blog Posts</h1>-->
         <div class="row">
-            <div class="col-xl-7 col-lg-10 col-md-12 col-sm-12 desc">
-                {% for post in posts %}
-                    <div id='{{ post }}' class="post">
-                       <!-- <h2>{{ post }}</h2>-->
-                    </div>
+            <div id="posts-column" class="col-xl-7 col-lg-10 col-md-12 col-sm-12 desc">
+                {% for post in posts[0:2] %}
+                    <div id='{{ post }}' class="post"></div>
                 {% endfor %}
             </div>
             <div id="archive-column" class="col-xl-3 col-lg-10 col-md-12 col-sm-12 desc">
-                
                 <div class="archive position-fixed">
                     <h1>Blog Archive</h2>
                     {% for year in year_list %}
@@ -29,8 +26,25 @@
                         {% endfor %}
                     {% endfor %}
                 </div>
+                <div class="posts-navigation position-fixed">
+                    <h1>Blog Pages</h2>
+                        <div class="navigation-pages">
+                            {% for page in post_pages %}
+                                <a class="page-num" href="#">{{ page }}</a>
+                            {% endfor %}
+                        </div>
+                </div>
             </div>
         </div>
-    </div>
+ <!--   <div class="row">
+            <div class="col-xl-7 col-lg-10 col-md-12 col-sm-12 desc">
+                <div class="posts-navigation">
+                    {% for page in post_pages %}
+                        <a class="page-num" href="#">{{ page }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>-->
+    </div> 
 </div>
 {% endblock %}
