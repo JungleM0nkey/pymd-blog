@@ -19,9 +19,31 @@ h4{
     margin:0px;
 }
 
+#archive-button-element{
+    padding:10px;
+    background-color:white;
+    border-radius:5px 5px 0px 0px;
+    border-top:1px solid rgb(128, 128, 128);
+    border-left:1px solid rgb(128, 128, 128);
+    border-right:1px solid rgb(128, 128, 128);
+    color:rgb(68, 68, 68);
+    margin-bottom:-1px;
+}
+
+#archive-button-element span{
+    font-family: Segoe UI;
+    font-weight:normal;
+    color:black;
+}
+
+#archive-button-element:hover{
+    cursor: pointer;
+    color:#2d65ff;
+}
+
 .archive{
     border:1px solid rgb(128, 128, 128);
-    border-radius:5px;
+    border-radius:0px 5px 5px 5px;
     padding: 1em;
     margin-bottom:2em;
     background-color: white;
@@ -52,7 +74,6 @@ h4{
     margin-top:2em;
     background-color: white;
     box-shadow: 5px 5px #888888;
-    
 }
 
 .pages a{
