@@ -1,17 +1,28 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container">
-    <div class="posts">
         <!--<h1>Blog Posts</h1>-->
         <div class="row">
-            <div id="posts-column" class="col-xl-7 col-lg-10 col-md-12 col-sm-12 desc">
+            <div class="col-xl-2 col-lg-0 col-md-12 col-sm-12 desc">
+                <!--left side is empty-->
+            </div>
+            <div id="posts-column" class="col-xl-6 col-lg-8 col-md-12 col-sm-12 desc">
+                <!--post content-->
                 {% for post in posts[0:2] %}
                     <div id='{{ post }}' class="post"></div>
                 {% endfor %}
+                <!--bottom page navigation bar-->
+                <div class="page-navigation">
+                    <div class="pages">
+                        {% for page in post_pages %}
+                            <a class="page-num" id="page-num-{{ page }}" href="#">{{ page }}</a>
+                        {% endfor %}
+                    </div>
+                </div>
             </div>
-            <div id="archive-column" class="col-xl-3 col-lg-10 col-md-12 col-sm-12 desc">
-                <div class="archive position-fixed">
+            <div id="archive-column" class="col-xl-2 col-lg-4 col-md-12 col-sm-12 desc">
+                <!--archive side column-->
+                <div class="archive">
                     <h1>Blog Archive</h2>
                     {% for year in year_list %}
                         <div class="archive-year">
@@ -26,25 +37,7 @@
                         {% endfor %}
                     {% endfor %}
                 </div>
-                <div class="posts-navigation position-fixed">
-                    <h1>Blog Pages</h2>
-                        <div class="navigation-pages">
-                            {% for page in post_pages %}
-                                <a class="page-num" href="#">{{ page }}</a>
-                            {% endfor %}
-                        </div>
-                </div>
             </div>
         </div>
- <!--   <div class="row">
-            <div class="col-xl-7 col-lg-10 col-md-12 col-sm-12 desc">
-                <div class="posts-navigation">
-                    {% for page in post_pages %}
-                        <a class="page-num" href="#">{{ page }}</a>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>-->
-    </div> 
-</div>
+
 {% endblock %}

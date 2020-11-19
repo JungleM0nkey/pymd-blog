@@ -1,12 +1,7 @@
 h1{
     margin-bottom:0.3em;
     font-weight:bolder;
-}
-
-.posts{
-    position: absolute;
-    top: 10%;
-    margin: auto;
+    
 }
 
 .post{
@@ -16,17 +11,6 @@ h1{
     margin-bottom:2em;
     background-color: white;
     box-shadow: 5px 5px #888888;
-}
-
-.posts-navigation{
-    border:1px solid rgb(128, 128, 128);
-    border-radius:5px;
-    padding: 1em;
-    margin-bottom:2em;
-    margin-top:370px;
-    background-color: white;
-    box-shadow: 5px 5px #888888;
-    text-align:center;
 }
 
 /*archive year*/
@@ -44,10 +28,6 @@ h4{
     box-shadow: 5px 5px #888888;
 }
 
-#archive-column{
-
-}
-
 .archive-year{
     background-color:rgb(240, 240, 240);
     margin-top:10px;
@@ -55,9 +35,27 @@ h4{
     border-radius:5px;
 }
 
-.navigation-pages{
+/*posts by pages navigation*/
+.pages{
     background-color:rgb(240, 240, 240);
     margin-top:10px;
     padding:5px;
     border-radius:5px;
+    text-align:center;
+}
+
+.page-navigation{
+    border:1px solid rgb(128, 128, 128);
+    border-radius:5px;
+    padding: 1em;
+    margin-bottom:2em;
+    margin-top:2em;
+    background-color: white;
+    box-shadow: 5px 5px #888888;
+    
+}
+
+.pages a{
+    padding:3px;
+    border-radius:2px;
 }

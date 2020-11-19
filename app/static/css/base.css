@@ -1,11 +1,18 @@
 body {
-    overflow-x:hidden;
     background-image: url('../images/email-pattern.png');
+}
+
+.header{
+    margin-top:5em;
 }
 
 .navbar{ 
     background:#2d65ff;
     padding:0px;
+}
+
+.row{
+    margin: auto;
 }
 
 .navbar-nav{

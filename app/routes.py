@@ -79,5 +79,4 @@ def post(post):
 @app.route('/posts', methods=['GET'])
 def posts():
     posts = session['posts']
-    print(posts)
     return jsonify({'posts':posts})
