@@ -4,6 +4,10 @@ h1{
     
 }
 
+.header-title h1{
+    background-color:rgb(240, 240, 240);
+}
+
 .post{
     border:1px solid rgb(128, 128, 128);
     border-radius:5px;
@@ -17,6 +21,13 @@ h1{
 h4{
     padding:0px;
     margin:0px;
+}
+
+h2{
+    border-bottom:1px solid black;
+    padding-bottom:5px;
+    margin-bottom:5px;
+    color:rgb(66, 66, 66);
 }
 
 #archive-button-element{
@@ -79,4 +90,17 @@ h4{
 .pages a{
     padding:3px;
     border-radius:2px;
+}
+
+.header-title{
+    border:1px solid rgb(128, 128, 128);
+    border-radius:5px 5px 5px 5px;
+    padding: 1em;
+    margin-bottom:2em;
+    background-color: white;
+    box-shadow: 5px 5px #888888;
+}
+
+.header-title {
+    text-align: center;
 }
