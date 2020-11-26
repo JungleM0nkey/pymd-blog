@@ -16,6 +16,6 @@ login.login_view = 'login'
 
 CWD = os.getcwd()
 APP_DIR = str(Path(CWD))
-POST_DIR = f'{APP_DIR}\\app\\posts'
+POST_DIR = Path(f'{APP_DIR}/app/posts')
 
 from app import routes, models
