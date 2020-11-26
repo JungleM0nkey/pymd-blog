@@ -14,8 +14,8 @@ migrate = Migrate(app, db)
 login = LoginManager(app)
 login.login_view = 'login'
 
-CWD = os.getcwd()
-APP_DIR = str(Path(CWD))
+#CWD = os.getcwd()
+APP_DIR = str(os.getcwd())
 POST_DIR = Path(f'{APP_DIR}/app/posts')
 
 from app import routes, models
