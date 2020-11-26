@@ -31,7 +31,7 @@ def index():
     year_set = set()
     #get the date for the files from the file metadata
     for f in post_files:
-        file_path = Path(f'{POST_DIR}/{f}.md')
+        file_path = str(Path(f'{POST_DIR}/{f}.md'))
         post = frontmatter.load(file_path)
         date = str(post['published-on']).replace(',','')
         year = date.split(' ')[2]
