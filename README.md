@@ -1,4 +1,7 @@
 ### Flask web blog. All posts are parsed .md files from the app/posts directory
 ![alt text](https://i.imgur.com/4YYgnWs.png")
 
-This is a work in progress. Once the blog is up and running this readme will be updated.
+Using BootStrap / jQuery for the front end.
+At its core the blog sends get requests for each .md file which is then parsed, and sent back to the client as html.
+
+Live Version: www.ishevch.com
