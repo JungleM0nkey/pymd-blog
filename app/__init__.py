@@ -15,7 +15,8 @@ login = LoginManager(app)
 login.login_view = 'login'
 
 #CWD = os.getcwd()
-APP_DIR = str(os.getcwd())
-POST_DIR = Path(f'{APP_DIR}/app/posts')
+#file directory
+basedir = os.path.abspath(os.path.dirname(__file__))
+POST_DIR = Path(f'{basedir}/posts')
 
 from app import routes, models
