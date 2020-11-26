@@ -59,7 +59,7 @@ def index():
 @app.route('/posts/<post>', methods=['GET'])
 def post(post):
     #parse the md file
-    filepath = f"{POST_DIR}\\{post}"
+    filepath = Path(f'{POST_DIR}/{post}')
     readme_file = open(filepath, "r")
     #md_post_string = markdown.markdown(readme_file.read(), extensions=["fenced_code", "codehilite", "meta"])
     md = markdown.Markdown(extensions=["fenced_code", "codehilite", "meta"])
