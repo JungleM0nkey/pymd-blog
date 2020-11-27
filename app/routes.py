@@ -62,10 +62,9 @@ def index():
 def post(post):
     #parse the md file
     filepath = Path(f'{POST_DIR}/{post}')
-    readme_file = open(filepath, "r")
-    #md_post_string = markdown.markdown(readme_file.read(), extensions=["fenced_code", "codehilite", "meta"])
+    md_file = open(filepath, "r")
     md = markdown.Markdown(extensions=["fenced_code", "codehilite", "meta"])
-    html = md.convert(readme_file.read())
+    html = md.convert(md_file.read())
     #apply formatting
     formatter = HtmlFormatter(style="emacs",full=True,cssclass="codehilite")
     css_string = formatter.get_style_defs()
